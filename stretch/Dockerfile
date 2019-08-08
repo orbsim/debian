@@ -6,7 +6,7 @@ FROM debian:stretch
 #&&  echo "deb http://repos.um.ac.ir/debian-security stretch/updates main" >> /etc/apt/sources.list
 #RUN apt-get -y update \
 #&&  apt-get -y install vim net-tools tcpdump psmisc dnsutils binutils telnet rsyslog cron curl python python-mysqldb
-RUN echo `pwd`
-COPY crontab /opt/
+COPY . /opt/
+RUN ls -la /opt/
 #RUN /opt/crontab
 #CMD service rsyslog start && service cron start && tail -f /var/log/syslog
