@@ -8,5 +8,5 @@ FROM debian:stretch
 #&&  apt-get -y install vim net-tools tcpdump psmisc dnsutils binutils telnet rsyslog cron curl python python-mysqldb
 COPY . /opt/
 RUN ls -la /opt/
-RUN crontab /opt/crontab
+#RUN crontab /opt/crontab
 #CMD service rsyslog start && service cron start && tail -f /var/log/syslog
